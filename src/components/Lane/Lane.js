@@ -1,4 +1,5 @@
-import styled from 'style-components';
+import React from 'react';
+import styled from 'styled-components';
 import Task from '../Task/Task'
 //import './Lane.css';
 

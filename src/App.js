@@ -1,10 +1,10 @@
-import styled, { createGlobalStyle } from 'styled-components';
-//import './App.css';
+import React from 'react';
+import styled, { injectGlobal } from 'styled-components';
 import Board from './pages/Board/Board';
 import Header from './components/Header/Header';
 import Backlog from './pages/Backlog/Backlog';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = injectGlobal`
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -22,7 +22,7 @@ const AppWrapper = styled.div`
 function App() {
   return (
     <>
-      <GlobalStyle />
+      
       <AppWrapper>
         <Header />
         <Board />

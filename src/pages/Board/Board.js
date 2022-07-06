@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import useDataFetching from '../../hooks/useDataFetching';
 import Lane from '../../components/Lane/Lane';
@@ -57,7 +58,7 @@ function Board() {
     const id = e.dataTransfer.getData('id');
     const updatedTasks = tasks.filter((task) => {
       if (task.id.toString() === id) {
-        task.lane - laneId;
+        task.lane = laneId;
       }
 
       return task;
