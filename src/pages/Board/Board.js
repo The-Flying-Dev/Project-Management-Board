@@ -16,11 +16,12 @@ function Board() {
   const [tasks, setTasks] = useState([]);
   const [error, setError] = useState('');
 
+  //fetchData from API
   useEffect(() => {
     async function fetchData() {
       try {
         const tasks = await fetch(
-          `https://https://my-json-server.typicode.com/PacktPublishing/React-Projects-Second-Edition/tasks`,
+          'https://my-json-server.typicode.com/PacktPublishing/React-Projects-Second-Edition/tasks',
         );
         const result = await tasks.json();
         if (result) {
