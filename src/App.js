@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { injectGlobal } from 'styled-components';
 import Board from './pages/Board/Board';
 import Header from './components/Header/Header';

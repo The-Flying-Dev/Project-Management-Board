@@ -1,7 +1,5 @@
-import React from 'react';
+import Task from '../Task/Task';
 import styled from 'styled-components';
-import Task from '../Task/Task'
-//import './Lane.css';
 
 const LaneWrapper = styled.div`
   text-align: left;
@@ -23,12 +21,21 @@ const Title = styled.h2`
   border-bottom: 1px solid darkGray;
 `;
 
-function Lane({ laneId, title, loading, error, tasks, onDragStart, onDragOver, onDrop }) {
+function Lane({
+  laneId,
+  title,
+  loading,
+  error,
+  tasks,
+  onDragStart,
+  onDragOver,
+  onDrop,
+}) {
   return (
-    <LaneWrapper>
+    <LaneWrapper onDragOver={onDragOver} onDrop={(e) => onDrop(e, laneId)}>
       <Title>{title}</Title>
-      {loading || error ? ( 
-        <span>{error || 'loading...'}</span>
+      {loading || error ? (
+        <span>{error || 'Loading...'}</span>
       ) : (
         tasks.map((task) => (
           <Task
@@ -37,10 +44,8 @@ function Lane({ laneId, title, loading, error, tasks, onDragStart, onDragOver, o
             title={task.title}
             body={task.body}
             onDragStart={onDragStart}
-            onDragOver={onDragOver}
-            onDrop={(e) => onDrop(e, laneId)}
           />
-        ))      
+        ))
       )}
     </LaneWrapper>
   );

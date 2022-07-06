@@ -1,5 +1,3 @@
-import React from 'react';
-//import './Task.css';
 import styled from 'styled-components';
 
 const TaskWrapper = styled.div`
@@ -14,9 +12,10 @@ const Title = styled.h3`
   margin: 0;
 `;
 
-function Task({ id, title, body, onDragStart}) {
+
+function Task({ id, title, body, onDragStart }) {
   return (
-    <TaskWrapper       
+    <TaskWrapper
       draggable
       onDragStart={(e) => onDragStart(e, id)}
     >
