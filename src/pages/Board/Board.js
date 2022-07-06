@@ -14,7 +14,7 @@ function Board() {
 
   //destructuring state
 
-  const [loading, error, tasks] = useDataFetching('https://my-json-server.typicode.com/PacktPublishing/React-Projects-Second-Edition/tasks')
+  const [loading, error, tasks] = useDataFetching('https://my-json-server.typicode.com/PacktPublishing/React-Projects-Second-Edition/tasks');
   //const [loading, setLoading] = useState(false);
   //const [tasks, setTasks] = useState([]);
   //const [error, setError] = useState('');
